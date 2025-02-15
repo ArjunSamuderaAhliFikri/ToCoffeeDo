@@ -1,0 +1,111 @@
+.right__bar {
+  position: relative;
+  background: linear-gradient(to bottom, #f3696e, #524175);
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.current__task__header {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #eaeaea;
+  text-transform: capitalize;
+  padding: 7% 5% 0 5%;
+  position: fixed;
+  top: -10%;
+  left: 75.5%;
+}
+
+.container__description__current__task {
+  padding: 7% 5% 0 5%;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  color: #ffff;
+  position: fixed;
+  top: -5%;
+  left: 75.5%;
+}
+
+.container__description__current__task > .title__task {
+  text-transform: inherit;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #eaeaea;
+}
+
+.container__description__current__task > .description {
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-top: 7px;
+  color: #d6d6d6;
+}
+
+.container__list__task {
+  position: fixed;
+  top: 10%;
+  left: 75.5%;
+  padding: 7% 5% 0 5%;
+  margin-top: 2.5em;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.container__list__task > h3 {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: inherit;
+  color: #eaeaea;
+}
+
+.wrapper__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.wrapper__list > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.wrapper__list > li > .container__checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wrapper__list > li > .container__checkbox > input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.wrapper__list > li > span {
+  font-family: inherit;
+  color: #fff;
+}
+
+@media screen and (max-width: 451px) {
+  .right__bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right__bar {
+    display: none;
+  }
+}

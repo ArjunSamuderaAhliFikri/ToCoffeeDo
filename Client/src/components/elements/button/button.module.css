@@ -1,0 +1,15 @@
+.button {
+  cursor: pointer;
+  background-color: crimson;
+  padding: 8px 16px;
+  text-transform: capitalize;
+  color: #eaeaea;
+  transition: all ease-in-out;
+  border: none;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.button:hover {
+  background-color: #444;
+}

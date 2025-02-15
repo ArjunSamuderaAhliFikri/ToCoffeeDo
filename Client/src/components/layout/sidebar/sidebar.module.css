@@ -1,0 +1,113 @@
+:root {
+  --bg-primary: #071f3d;
+}
+
+.sidebar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-top-right-radius: 10px;
+  width: 12%;
+  height: 100dvh;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.container__logo {
+  margin-top: 15%;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  color: #eaeaea;
+  font-weight: 600;
+  font-size: 16px;
+  position: fixed;
+  top: -25.5%;
+}
+
+.logo__todo {
+  font-size: 1.5em;
+  margin-right: 1rem;
+  color: #48cae4;
+}
+
+.buttonCloseSidebar {
+  display: none;
+}
+
+.sidebar__menu {
+  position: fixed;
+  top: 11.5%;
+}
+
+.sidebar__menu > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: #ffff;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar__menu:hover li {
+  color: #d9d9d9;
+}
+
+.sidebar__menu > li > i {
+  font-size: 1.4em;
+}
+
+.moveSidebar {
+  transform: translateX(-100%);
+}
+
+@media screen and (max-width: 451px) {
+  .sidebar {
+    position: absolute;
+    z-index: 10;
+    background-color: var(--bg-primary);
+    border-radius: 4px;
+    padding: 0 100px;
+  }
+
+  .buttonCloseSidebar {
+    display: block;
+    position: absolute;
+    padding: 2px 12px;
+    right: 20px;
+    top: 12px;
+    border: 2px solid #f9f9f9;
+    background-color: #333;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .buttonCloseSIdebar:target {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .sidebar {
+    width: 16%;
+    transform: translateX(null);
+  }
+
+  .container__logo {
+    top: -27%;
+  }
+
+  .sidebar__menu {
+    top: 16%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 25%;
+  }
+}

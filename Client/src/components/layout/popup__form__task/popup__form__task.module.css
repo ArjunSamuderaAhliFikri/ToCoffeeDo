@@ -1,0 +1,215 @@
+.container__popup__form__task {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  position: fixed;
+  padding: 12px;
+  width: 40%;
+  min-width: 320px;
+  height: 50vh;
+  min-height: 40dvh;
+  border-radius: 14px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.header {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #1c274c;
+  padding: 12px;
+}
+
+.container__popup__form__task > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 14px;
+  gap: 1rem;
+}
+
+.input__text {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background-color: #e9ecef;
+}
+
+.description__task {
+  min-width: 100%;
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  outline: none;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  padding: 12px;
+  font-family: inherit;
+}
+
+.container__set__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.start__time__task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.start__time__task > h2 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1rem;
+  text-transform: inherit;
+  color: #495057;
+}
+
+.end__time__task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.end__time__task > h2 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1rem;
+  text-transform: inherit;
+  color: #495057;
+}
+
+.container__button__create__task {
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.container__button__create__task > .button__create__task {
+  width: 100%;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: #149cff;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+
+.container__button__create__task > .button__create__task:hover {
+  background-color: #0165ad;
+}
+
+.container__button__close__task {
+  position: absolute;
+  top: -19%;
+  right: -2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container__button__close__task > .button__close__task {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f32536;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+
+.container__button__close__task > .button__close__task:hover {
+  background-color: #a50210;
+}
+
+.warning__title {
+  display: none;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #f32536;
+  margin-right: auto;
+  margin: 8px auto 12px 12px;
+}
+
+.warning__description {
+  display: none;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #f32536;
+  margin-right: auto;
+  margin: 8px auto 12px 12px;
+}
+
+.warning__time__task {
+  display: none;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #f32536;
+  margin-right: auto;
+  margin: 8px auto 12px 12px;
+}
+
+@media screen and (max-width: 1366px) {
+  .description__task {
+    width: 90%;
+  }
+
+  .container__popup__form__task {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .container__popup__form__task {
+    height: 400px;
+  }
+
+  .description__task {
+    max-width: 100%;
+    height: 110px;
+  }
+
+  .container__button__close__task {
+    top: -23%;
+    right: -7.5%;
+    width: 35px;
+    height: 35px;
+  }
+}

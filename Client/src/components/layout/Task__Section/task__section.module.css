@@ -1,0 +1,415 @@
+.container__task {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  margin-top: 32px;
+}
+
+.top__section__task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__remember__me {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(108, 117, 125, 1);
+}
+
+.icons__task {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.container__icon__task__delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e63946;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.container__icon__task__edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fb8500;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+
+.container__icon__task__edit:hover {
+  background-color: #a95a00;
+}
+
+.container__icon__task__delete:hover {
+  background-color: rgb(175, 0, 0);
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #eaeaea;
+}
+
+.add__activity__button {
+  border: none;
+  text-transform: capitalize;
+  background-color: #ced4da;
+  color: rgba(108, 117, 125, 1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add__activity__button:hover {
+  background-color: #6c757d;
+  color: #d9d9d9;
+}
+
+.remember__task {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  overflow-x: auto;
+  width: 100%;
+  padding: 4px 2px;
+  margin-top: 0.7rem;
+}
+
+.card {
+  width: 273px;
+  max-width: 80%;
+  height: 300px;
+  background: linear-gradient(to bottom right, #08203e, #557c93);
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px rgba(108, 117, 125, 1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(0.97);
+  box-shadow: 0px 2px 5px rgb(29, 36, 42);
+}
+
+.container__checkbox {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -1.25%;
+  left: -1.25%;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.container__checkbox > input {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+}
+
+.description__card {
+  overflow: hidden;
+  padding: 16px 12px;
+  text-transform: capitalize;
+}
+
+.description__card > .header {
+  color: #e9ecef;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.3rem;
+}
+
+.header > span {
+  color: inherit;
+  font-weight: inherit;
+  font-size: 1.8rem;
+}
+
+.description {
+  font-size: 12px;
+  color: #c3c4c5;
+  text-transform: inherit;
+  margin-top: 4px;
+}
+
+.time__task {
+  width: 85%;
+  margin-left: 12px;
+  font-size: 0.8rem;
+}
+
+.time__task > span {
+  color: #ffff;
+  margin-left: 8px;
+}
+
+.clock__icon {
+  color: #edf2f4;
+}
+.end__task {
+  width: 85%;
+  padding: 8px 24px;
+  display: block;
+  background-color: #149cff;
+  color: #ffff;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 35%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+
+.end__task:hover {
+  background-color: #006cb9;
+}
+
+.recent__task {
+  /* background-color: skyblue; */
+  margin-top: 2.5em;
+  padding: 14px 0;
+}
+
+.header {
+  color: #6c757d;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.9em;
+}
+
+.container__recent__task {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 50px 1fr 50px;
+  justify-content: center;
+  gap: 2.5em;
+  margin-top: 2em;
+  /* background-color: cornflowerblue; */
+}
+
+.task__default__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  grid-column: 2 / span 2;
+  box-shadow: 0px 4px 2px #08203e;
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.task__default__user:hover {
+  transform: scale(0.99);
+}
+
+.description__recent__task {
+  font-family: "Poppins", sans-serif;
+}
+
+.description__recent__task > .title {
+  font-family: inherit;
+  text-transform: capitalize;
+}
+
+.description__recent__task > .description {
+  font-family: inherit;
+  color: rgba(108, 117, 125, 0.7);
+}
+
+.container__circle__progress {
+  display: grid;
+  place-items: center;
+  background-color: crimson;
+  color: #333;
+  padding: 3px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.circle__progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.wrapper__form__recent__task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 6px;
+  margin-top: 1.3rem;
+}
+
+.form__recent__task {
+  min-width: 82.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.form__recent__task > input {
+  display: block;
+  width: calc(100% - 50px);
+  outline: none;
+  border: 1px solid transparent;
+  padding: 8px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form__recent__task > input:focus {
+  border: 1px solid #2225;
+}
+
+.form__recent__task > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  opacity: 0.5;
+}
+
+.form__recent__task > label > i.icon__add {
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 451px) {
+  .top__section__task {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header__remember__me {
+    font-size: 16px;
+  }
+
+  .icons__task {
+    margin: 14px 0;
+    margin-left: auto;
+  }
+
+  .container__icon__task__delete {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .container__icon__task__edit {
+    width: 40px;
+    height: 40px;
+  }
+
+  .add__activity__button {
+    padding: 8px 12px;
+  }
+
+  .recent__task > .header {
+    font-size: 1.3rem;
+  }
+
+  .description__recent__task {
+    width: 80%;
+  }
+
+  .container__recent__task {
+    justify-content: center;
+    align-items: center;
+  }
+  .task__default__user {
+    margin: 0 auto;
+    grid-column: 1 / span 3;
+    padding: 1.2rem;
+  }
+
+  .task__default__user > .description__recent__task > .title {
+    font-size: 1.3em;
+  }
+
+  .container__circle__progress {
+    padding: 3px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .circle__progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .wrapper__form__recent__task {
+    width: 95%;
+    padding: 8px 6px;
+    margin-top: 1.3rem;
+  }
+
+  .form__recent__task {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6px;
+  }
+
+  .form__recent__task > input {
+    display: block;
+    width: calc(100% - 50px);
+    outline: none;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .form__recent__task > input:focus {
+    border: 1px solid #2225;
+  }
+
+  .form__recent__task > input::placeholder {
+    font-family: "Poppins", sans-serif;
+    opacity: 0.5;
+  }
+
+  .form__recent__task > label > i.icon__add {
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
