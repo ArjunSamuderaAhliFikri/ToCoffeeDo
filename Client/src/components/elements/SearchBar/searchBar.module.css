@@ -1,0 +1,26 @@
+.wrapper_search_task {
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  transform: translateX(-50%);
+  width: 27.5%;
+  /* background-color: skyblue; */
+}
+
+.wrapper_search_task > input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px #3335;
+  color: #444;
+}
+
+@media screen and (max-width: 451px) {
+  .wrapper_search_task {
+    left: 37.5%;
+    width: 60%;
+  }
+}

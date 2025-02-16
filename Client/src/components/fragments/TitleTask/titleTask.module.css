@@ -1,0 +1,25 @@
+.title_task {
+  font-weight: 300;
+  font-size: 48px;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  margin-block-start: 14px;
+}
+
+.sub_title_task {
+  font-weight: 300;
+  font-size: 50px;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+@media screen and (max-width: 451px) {
+  .title_task {
+    font-size: 24.5px;
+  }
+
+  .sub_title_task {
+    font-size: 28px;
+  }
+}

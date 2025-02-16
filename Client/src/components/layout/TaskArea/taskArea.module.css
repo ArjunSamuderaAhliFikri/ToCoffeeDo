@@ -1,0 +1,62 @@
+/* Task Area Section */
+
+.container_task_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50dvh;
+  padding: 20px 32px;
+  background-color: #f5f5f5;
+}
+
+.wrapper_tasks {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0.75rem;
+  width: 45%;
+  max-width: 100%;
+  background-color: #3332;
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+
+.wrapper_chat {
+  width: 45%;
+  height: 100px;
+  background-color: #3331;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px #3335;
+}
+
+@media screen and (max-width: 451px) {
+  .container_task_area {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card_task {
+    padding: 0.7rem 1rem;
+  }
+
+  .wrapper_button_task button.complete_button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .info_task {
+    gap: 12px;
+  }
+
+  .info_task > span {
+    font-size: 12px;
+  }
+
+  .wrapper_tasks {
+    width: 100%;
+  }
+
+  .wrapper_chat {
+    width: 100%;
+  }
+}
