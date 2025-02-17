@@ -30,7 +30,7 @@ const DetailTaskPage = (): JSX.Element => {
   const { notLayout, setNotLayout } = useContext(NotLayoutContext);
 
   useEffect(() => {
-    async function retrieveDataById(id: string) {
+    async function retrieveDataById(id: string | undefined) {
       const response = await fetch(`http://localhost:3000/data/${id}`);
       const result = await response.json();
 
