@@ -12,6 +12,7 @@ type DetailTaskDataProps = {
   title: string;
   isDone: boolean;
   tasks: {
+    id: string;
     task: string;
     isComplete: boolean;
   }[];
@@ -45,7 +46,7 @@ const DetailTaskPage = (): JSX.Element => {
 
   return (
     <>
-      {detailTaskData == undefined ? (
+      {detailTaskData?.title == "" ? (
         "undefined"
       ) : (
         <>
@@ -60,12 +61,13 @@ const DetailTaskPage = (): JSX.Element => {
           >
             <HeaderTask>
               <ContentTask>
-                <TitleTask detailTaskData={detailTaskData} />
+                <TitleTask title={detailTaskData.title} />
                 <DetailTask />
               </ContentTask>
             </HeaderTask>
             <TaskArea
               tasks={detailTaskData.tasks}
+              detailTaskData={detailTaskData}
               setDetailTaskData={setDetailTaskData}
             />
           </div>

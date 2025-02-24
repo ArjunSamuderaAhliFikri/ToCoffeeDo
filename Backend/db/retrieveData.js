@@ -24,6 +24,26 @@ async function retrieveDataById(id) {
     return getData;
   } catch (error) {
     console.log("Error: ", error);
+  } finally {
+    await mongoose.disconnect();
+  }
+}
+
+async function updateTask(task, id) {
+  try {
+    await connectToDatabase();
+    const findCollection = mongoose.connection.db.collection("todo-apps");
+    const filterCollection = await findCollection.findOne({
+      _id: new mongoose.Types.ObjectId(id),
+    });
+    await findCollection.replaceOne(filterCollection, task, { upsert: true });
+    console.log(filterCollection);
+    console.log("Data telah berhasil dihapus!");
+  } catch (error) {
+    console.log(`Error bro ${error}`);
+  } finally {
+    console.log("Proses data berhasil diselesaikan!");
+    await mongoose.disconnect();
   }
 }
 
@@ -34,9 +54,11 @@ async function run() {
     const findCollection = await mongoose.connection.db.collection("todo-apps");
     const task = await findCollection.find().toArray();
     return task;
+  } catch (error) {
+    console.log(`Error : ${error}`);
   } finally {
     await mongoose.disconnect();
   }
 }
 
-module.exports = { run, retrieveDataById };
+module.exports = { run, retrieveDataById, updateTask };
