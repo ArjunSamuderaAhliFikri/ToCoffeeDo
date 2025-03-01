@@ -36,9 +36,10 @@ async function updateTask(task, id) {
     const filterCollection = await findCollection.findOne({
       _id: new mongoose.Types.ObjectId(id),
     });
+
     await findCollection.replaceOne(filterCollection, task, { upsert: true });
     console.log(filterCollection);
-    console.log("Data telah berhasil dihapus!");
+    console.log("Data telah berhasil diproses!");
   } catch (error) {
     console.log(`Error bro ${error}`);
   } finally {

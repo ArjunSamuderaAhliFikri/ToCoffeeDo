@@ -66,6 +66,7 @@ const DetailTaskPage = (): JSX.Element => {
               </ContentTask>
             </HeaderTask>
             <TaskArea
+              id={detailTaskData._id}
               tasks={detailTaskData.tasks}
               detailTaskData={detailTaskData}
               setDetailTaskData={setDetailTaskData}

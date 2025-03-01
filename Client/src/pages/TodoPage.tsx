@@ -1,6 +1,7 @@
 import styles from "../styles/TodoPage.module.css";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -78,14 +79,23 @@ function Tasks(props: TasksProps): JSX.Element {
   return (
     <>
       <section className={styles.container_tasks}>
-        <h1 className={styles.header_tasks}>my task</h1>
+        <div className={styles.wrapper_header_tasks}>
+          <div>
+            <h1 className={styles.header_tasks}>my task</h1>
 
-        <ul className={styles.list_option_task}>
-          <li>All</li>
-          <li>40%</li>
-          <li>50%</li>
-          <li>complete</li>
-        </ul>
+            <ul className={styles.list_option_task}>
+              <li>All</li>
+              <li>40%</li>
+              <li>50%</li>
+              <li>complete</li>
+            </ul>
+          </div>
+
+          <button type="button" className={styles.add_task_button}>
+            <PlaylistAddIcon />
+            <span>add task</span>
+          </button>
+        </div>
 
         <div className={styles.wrapper_mytasks}>
           {tasksUser != undefined &&

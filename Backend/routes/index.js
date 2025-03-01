@@ -27,7 +27,6 @@ app.put("/data/:id", async (req, res) => {
 
 app.get("/data", async (req, res) => {
   const result = await run();
-  console.log(req.body);
   res.json(result);
 });
 
